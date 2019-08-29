@@ -19,10 +19,10 @@ include(XtCompilerSupport)
 include(XtTooling)
 
 # library checks  #########################################################################
-set(DS_REQUIRED_BOOST_LIBS atomic chrono date_time filesystem system thread timer python36)
+set(DS_REQUIRED_BOOST_LIBS atomic chrono date_time filesystem python system thread timer)
 find_package(PkgConfig)
 set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/../environments/debian-minimal/local/")
-find_package(Boost 1.68 COMPONENTS ${DS_REQUIRED_BOOST_LIBS} REQUIRED)
+find_package(Boost 1.70 COMPONENTS ${DS_REQUIRED_BOOST_LIBS} REQUIRED)
 dune_register_package_flags(INCLUDE_DIRS ${Boost_INCLUDE_DIRS})
 foreach(_boost_lib ${DS_REQUIRED_BOOST_LIBS})
   set(_BOOST_LIB "")
