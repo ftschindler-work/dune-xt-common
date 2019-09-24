@@ -46,3 +46,5 @@ data
 .idea
 cmake/modules/petsc
 *.pyc
+tags
+.vscode
